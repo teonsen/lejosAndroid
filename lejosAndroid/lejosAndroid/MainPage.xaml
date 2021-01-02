@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lejosAndroid.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="EV3 Controller" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="1" Text="Forward" Clicked="OnForwardButton_Clicked" />
+            <Button Grid.Row="1" Grid.Column="0" Text="Left" Clicked="OnLeftButton_Clicked" />
+            <Button Grid.Row="1" Grid.Column="1" Text="STOP" Clicked="OnStopButton_Clicked" />
+            <Button Grid.Row="1" Grid.Column="2" Text="Right" Clicked="OnRightButton_Clicked" />
+            <Button Grid.Row="2" Grid.Column="1" Text="Back" Clicked="OnBackButton_Clicked" />
+            <Label Grid.Row="3" Grid.Column="1" Text="Orientation Mode" HorizontalOptions="Center" />
+            <Switch Grid.Row="3" Grid.Column="2" x:Name = "switch" HorizontalOptions="Start" Toggled = "OnToggled"/>
+            <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" x:Name="LableOrientation" Text="Label Orientation" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        </Grid>
+    </StackLayout>
+</ContentPage>
