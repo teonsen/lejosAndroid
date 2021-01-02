@@ -32,7 +32,7 @@ namespace lejosAndroid
             // 調整するパラメータ
             float paramX = 3;
             float paramY = 5.5F;
-            int paramLR = 140;
+            int paramLR = 140; // 直角に傾けるくらいで左右モードにする
 
             // Xに係数をかけて左右のSpeedとする
             int ox = (int)(data.Orientation.X * 100 * paramX);
@@ -50,11 +50,11 @@ namespace lejosAndroid
                 {
                     if (ox < 0)
                     {
-                        _ev3.Wheels.TurnLeft(oy, 360);
+                        _ev3.Wheels.TurnLeft(ox, 360);
                     }
                     else
                     {
-                        _ev3.Wheels.TurnRight(oy, 360);
+                        _ev3.Wheels.TurnRight(ox, 360);
                     }
                 }
                 else
